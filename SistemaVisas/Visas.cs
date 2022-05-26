@@ -7,6 +7,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace SistemaVisas
 {
+    [Serializable]
     abstract class Visa
     {
         private int _intNumeroVisa;
@@ -52,6 +53,7 @@ namespace SistemaVisas
         public abstract double CalcularPrecio();
     }
 
+    [Serializable]
     class VisaEstudiante : Visa
     {
         private string _strNombreEscuela;
@@ -70,6 +72,7 @@ namespace SistemaVisas
         }
     }
 
+    [Serializable]
     class VisaTrabajo : Visa
     {
         private string _strNombreEmpresa;
@@ -88,6 +91,7 @@ namespace SistemaVisas
         }
     }
 
+    [Serializable]
     class VisaTemporal : Visa
     {
         private DateTime _dtmFechaLlegada;
